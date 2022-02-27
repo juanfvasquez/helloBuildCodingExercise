@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const TOKEN = process.env.REACT_APP_ACCESS_TOKEN || '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'
+const TOKEN = process.env.REACT_APP_ACCESS_TOKEN || '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'
 const API_URL = 'https://api.github.com/graphql'
 const headers = {
   'Content-Type': 'application/json',
