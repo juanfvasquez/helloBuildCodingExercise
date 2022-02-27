@@ -30,7 +30,7 @@ const Login = () => {
   }
 	
 	const fetchData = user => {
-		githubService.fetchGithubData(user.login)
+		githubService.fetchGithubData(user.username)
 		.then(({ data }) => {
 			if (!data.data.user) {
 				swal('No se puede iniciar sesión', 'El usuario no existe en Github', 'error')

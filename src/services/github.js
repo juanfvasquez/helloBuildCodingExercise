@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const TOKEN = process.env.REACT_APP_ACCESS_TOKEN
+const TOKEN = process.env.REACT_APP_ACCESS_TOKEN || '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'
 const API_URL = 'https://api.github.com/graphql'
 const headers = {
   'Content-Type': 'application/json',
@@ -11,7 +11,7 @@ export const fetchGithubData = user => {
   const body = {
     query: `
         query { 
-          user(login: "juanfvasquez") {
+          user(login: "${user}") {
             name
             avatarUrl
             login
