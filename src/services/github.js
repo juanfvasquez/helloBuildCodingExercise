@@ -22,6 +22,14 @@ export const fetchGithubData = user => {
                   name
                   url
                   description
+                  languages(first: 10) {
+                    edges {
+                      node {
+                        id
+                        name
+                      }
+                    }
+                  }
                 }
               }
             }
